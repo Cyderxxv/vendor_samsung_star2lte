@@ -460,6 +460,10 @@
 		<ctl name="ABOX UAIF3 rate" value="16000" />
 	</path>
 
+	<!-- Amp & codec mute control -->
+	<path name="output-mute">
+	</path>
+
 	<!-- Output mixer settings -->
 	<!-- Playback paths -->
 	<path name="media-handset">

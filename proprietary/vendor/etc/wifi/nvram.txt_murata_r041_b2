@@ -1,7 +1,7 @@
-# BCM4361B2 Murata 1QW ES4.1
-# Release date : 20171121
+# BCM4361B2 Murata 1QW ES4.1_180104
+# Release date : 20171127
 # For Type-1QW : ES4.1
-# Test F/W : IGUANA08T_REL_13_35_224_MFG
+# Test F/W : IGUANA08T_REL_13_35_189_MFG
 NVRAMRev=$Rev: 506283 $
 sromrev=11
 boardrev=0x1401
@@ -118,15 +118,16 @@ slice/1/pa2ga1=-152,6478,-749
 slice/1/pa2ga2=-176,4535,-608
 slice/1/pa2ga3=-197,4560,-605
 
-pa5ga0=-232,6251,-785,-231,6347,-796,-229,6087,-767,-236,6089,-767
-pa5ga1=-234,6310,-792,-234,6337,-796,-235,6314,-793,-235,6350,-797
+
+pa5ga0=-232,5867,-741,-231,6347,-796,-229,6087,-767,-236,5705,-723
+pa5ga1=-234,5926,-748,-234,6337,-796,-235,6314,-793,-235,5966,-753
 
 
 # Target max Power
-maxp2ga0=81
-maxp2ga1=81
-maxp5ga0=78,78,78,78
-maxp5ga1=81,81,80,81
+maxp2ga0=84
+maxp2ga1=84
+maxp5ga0=76,80,80,74
+maxp5ga1=78,82,82,78
 subband5gver=0x4
 paparambwver=3
 ## Target power & offset parameters
@@ -136,23 +137,23 @@ pdoffset40ma0=0xEFFF
 pdoffset80ma0=0xEFFF
 pdoffset40ma1=0xEFFF
 pdoffset80ma1=0xEEFF
-cckbw202gpo=0x1100
+cckbw202gpo=0x0000
 cckbw20ul2gpo=0
-mcsbw202gpo=0xAA886444
+mcsbw202gpo=0xAA844444
 mcsbw402gpo=0xCCAA8886
-dot11agofdmhrbw202gpo=0x6666
+dot11agofdmhrbw202gpo=0x8888
 ofdmlrbw202gpo=0x0044
-mcsbw205glpo=0x86444442
-mcsbw405glpo=0x88866664
-mcsbw805glpo=0xAAA88886
+mcsbw205glpo=0x84222222
+mcsbw405glpo=0xBBB88886
+mcsbw805glpo=0xCCCAAAA8
 mcsbw1605glpo=0
-mcsbw205gmpo=0x86444442
-mcsbw405gmpo=0x88866664
-mcsbw805gmpo=0xAAA88886
+mcsbw205gmpo=0x84222222
+mcsbw405gmpo=0xAAA66665
+mcsbw805gmpo=0xCCCAAAA8
 mcsbw1605gmpo=0
-mcsbw205ghpo=0x86444442
-mcsbw405ghpo=0x88866664
-mcsbw805ghpo=0xAAA88886
+mcsbw205ghpo=0x84222222
+mcsbw405ghpo=0xBBB88886
+mcsbw805ghpo=0xCCCAAAA8
 mcsbw1605ghpo=0
 mcslr5glpo=0x0000
 mcslr5gmpo=0x0000
@@ -247,8 +248,8 @@ rssicorrnorm_c1=5,5
 rssicorrnorm5g_c0=5,5,5,5,5,5,5,5,5,6,6,6
 rssicorrnorm5g_c1=4,4,4,4,4,4,4,4,4,5,4,4
 ## 2G CH compensation Parameters
-slice/1/powoffs2gtna0=-4,-2,0,-1,-1,-3,-2,0,0,0,0,-2,-4,0
-slice/1/powoffs2gtna1=-5,-4,-3,-3,-2,0,0,0,-2,-2,-2,-1,-3,0
+slice/1/powoffs2gtna0=-2,0,1,1,1,0,0,0,1,2,1,0,-2,0
+slice/1/powoffs2gtna1=-2,-2,-1,0,1,2,2,2,1,1,1,0,0,0
 ## Imp_TXBF calibration parameters
 rpcal2g=15
 rpcal5gb0=129
@@ -264,32 +265,34 @@ slice/1/rpcal5gb3=163
 # 5G power offset per channel for band edge channel
 powoffs5g20mtna0=0,0,0,0,0,0,0
 powoffs5g20mtna1=0,0,0,0,0,0,0
-powoffs5g40mtna0=0,0,0,0,0
-powoffs5g40mtna1=0,0,0,0,0
-powoffs5g80mtna0=0,0,0,0,0
-powoffs5g80mtna1=0,0,0,0,0
+powoffs5g40mtna0=-8,0,0,0,0
+powoffs5g40mtna1=-8,0,0,0,0
+powoffs5g80mtna0=-4,0,0,0,0
+powoffs5g80mtna1=-4,0,0,0,0
+
 
 # ###########  Configuration for Software Features ############
 ## --- SAR power back off ---
 ## SAR Enable ON & Non-RSDB & Non-FCC
-dynamicsarctrl_5g=0xb0b0
-slice/1/dynamicsarctrl_2g=0xb4b4
-## SAR Enable OFF & Non-RSDB & FCC
-dynamicsarctrl_5g_2=0xb0b0
-slice/1/dynamicsarctrl_2g_2=0xb4b4
+dynamicsarctrl_5g=0xb5b5
+slice/1/dynamicsarctrl_2g=0xbebe
+## SAR Enable ON & Non-RSDB & FCC
+dynamicsarctrl_5g_2=0xb5b5
+slice/1/dynamicsarctrl_2g_2=0xbebe
 ## RSDB SAR Limits
 ## SAR Enable ON & RSDB & Non-FCC
-rsdb_dynamicsarctrl_5g=0xb0b0
-slice/1/rsdb_dynamicsarctrl_2g=0xb4b4
+rsdb_dynamicsarctrl_5g=0xb1b1
+slice/1/rsdb_dynamicsarctrl_2g=0xb2b2
 ## SAR Enable ON & RSDB & FCC
-rsdb_dynamicsarctrl_5g_2=0xb0b0
-slice/1/rsdb_dynamicsarctrl_2g_2=0xb4b4
+rsdb_dynamicsarctrl_5g_2=0xb1b1
+slice/1/rsdb_dynamicsarctrl_2g_2=0xb2b2
 ## SAR Enable OFF & RSDB 
-rsdb_dynamicsarctrl_5g_1=0xb0b0
-slice/1/rsdb_dynamicsarctrl_2g_1=0xb4b4
+rsdb_dynamicsarctrl_5g_1=0xb1b1
+slice/1/rsdb_dynamicsarctrl_2g_1=0xb2b2
+
 ## --- CH12 CH13 Power Limit ---
-#slice/1/fccpwrch12=10
-#slice/1/fccpwrch13=1
+slice/1/fccpwrch12=52
+slice/1/fccpwrch13=48
 #slice/1/fccpwroverride=0
 
 ## --- RX Temperature Throttling parameter ---
@@ -317,3 +320,4 @@ cck_onecore_tx=1
 ## --- OCL coremask setting ---
 #ocl_cm=2
 #slice/1/ocl_cm=2
+
